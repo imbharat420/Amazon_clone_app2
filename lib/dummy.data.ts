@@ -50,3 +50,25 @@ export const dummy_HotDeals: Product[] = [
     brand: "Jabra",
   },
 ];
+
+export const dummy_category = [
+  {
+    name: "Computer & Laptop",
+    Icon: "laptop",
+  },
+  {
+    name: "Consoles & Games",
+    Icon: "game-controller",
+  },
+  {
+    name: "Heath",
+    Icon: "leaf",
+  },
+];
+
+export const bannerImages = [
+  "https://wallpaperaccess.com/full/1170322.jpg",
+  "https://cdn.mos.cms.futurecdn.net/h5NgQEGTcUwAyBzyNJwPue.jpg",
+  "https://images.unsplash.com/photo-1617331647771-3df3a9ca3e9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+  "https://images.unsplash.com/photo-1588796460718-f457ad1e1a1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+];

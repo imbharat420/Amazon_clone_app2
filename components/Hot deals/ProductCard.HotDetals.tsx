@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import tw from "twrnc";
 import Icon from "react-native-vector-icons/FontAwesome";
-import { Product } from "../../lib/Product.data";
+import { Product } from "../../lib/dummy.data";
 import CurrencyFormat from "../Currency/CurrencyFormat";
 enum style {
   wrapper = "mt-8 ",
