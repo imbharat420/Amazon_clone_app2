@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../components/Header/Header";
 import tw from "twrnc";
 import SearchBar from "../components/searchBar/SearchBar";
+import HotDeals from "../components/Hot deals/HotDeals";
 
 const HomeScreen = () => {
   return (
@@ -12,6 +13,9 @@ const HomeScreen = () => {
 
       {/* search */}
       <SearchBar />
+
+      {/* not details */}
+      <HotDeals />
     </SafeAreaView>
   );
 };
