@@ -16,7 +16,7 @@ const HotDeals = () => {
       {/* title and show All */}
       <View style={tw`${style.headerContainer}`}>
         <Text style={tw`${style.title}`}>HotDeals</Text>
-        <View style={tw`flex-row items-center`}>
+      <View style={tw`flex-row items-center`}>
           <Text style={tw`text-[#ff5903] mr-2`}>Show All</Text>
           {/* right Arrow */}
           <Icon size={18} name="angle-right" color="#ff5903" />
