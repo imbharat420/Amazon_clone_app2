@@ -6,15 +6,22 @@ import SearchBar from "../components/searchBar/SearchBar";
 import HotDeals from "../components/Hot deals/HotDeals";
 import PopularCategory from "../components/Popular category/PopularCategory";
 import Banner from "../components/Banner/Banner";
+import { LinearGradient } from "expo-linear-gradient";
+import BalanceInfo from "../components/Balance/BalanceInfo";
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={tw` flex-1 bg-white `}>
-      <Header />
+    <LinearGradient colors={["#1A232E", "#white"]} style={tw` flex-1 `}>
+      <View style={tw`bg-[#1A232E]  rounded-b-xl `}>
+        <Header />
+        {/* Search bar */}
+        <SearchBar />
+        {/* Balance */}
+        <BalanceInfo />
+      </View>
+
       <View style={tw`w-full  border-b  mt-2 border-[#f5f5f5]`} />
 
-      {/* search */}
-      <SearchBar />
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Banner */}
         <Banner />
@@ -24,7 +31,7 @@ const HomeScreen = () => {
         {/* Popular  */}
         <PopularCategory />
       </ScrollView>
-    </SafeAreaView>
+    </LinearGradient>
   );
 };
 

@@ -1,33 +1,38 @@
-import { View, Text, Image, SafeAreaView } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  SafeAreaView,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
-import Icon from "react-native-vector-icons/FontAwesome";
-import Icons2 from "react-native-vector-icons/Entypo";
+import Icon from "react-native-vector-icons/Feather";
 import tw from "twrnc";
+
 const Header = () => {
   return (
-    <SafeAreaView style={tw`bg-white mt-4`}>
-      <View style={tw`flex-row  items-center bg-white  justify-between pb-2`}>
-        {/* Left sider image */}
-        <View style={tw`  `}>
+    <SafeAreaView style={tw`bg-[#1A232E] pb-8 rounded-b-sm  `}>
+      <View style={tw`flex-row  items-center  px-3  justify-between pb-2`}>
+        <TouchableOpacity style={tw` `}>
+          <Icon name="align-center" size={25} color="#fff" />
+        </TouchableOpacity>
+        {/* center sider image */}
+        <View style={tw` items-center mx-auto`}>
           <Image
-            source={require("../../assets/images/Amazonlogo.png")}
-            style={tw`w-[135px] h-9`}
+            source={{
+              uri: "https://cdn.sanity.io/images/7azvzymu/production/e2b54ca7b0256bc44f5485cdc936149b2670e93f-711x351.png",
+            }}
+            style={tw`w-[100px] ml-9 h-9`}
           />
         </View>
-        {/* Right sider image */}
-        <View style={tw`mr-5  flex-row  `}>
-          <View
-            style={tw`h-9 w-9 rounded-full bg-[#eee] mx-[20px]  flex items-center justify-center`}
-          >
-            <Icon size={18} name="star" color="black" />
-          </View>
-          <View
-            style={tw`h-9 w-9 rounded-full bg-[#eee]  flex items-center justify-center`}
-          >
-            <Icons2 size={18} name="dots-three-horizontal" color="black" />
-          </View>
+        {/* right */}
+        <View style={tw`flex-row justify-around w-[80px] `}>
+          <Icon name="shopping-cart" size={25} style={tw`mx-4`} color="#fff" />
+          <Icon name="bell" size={25} color="#fff" />
         </View>
       </View>
+
+      {/* Balance */}
     </SafeAreaView>
   );
 };
