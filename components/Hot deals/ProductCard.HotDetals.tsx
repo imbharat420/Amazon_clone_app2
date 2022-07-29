@@ -15,6 +15,7 @@ interface CardProps {
 }
 
 const ProductCard = ({ item }: CardProps) => {
+  console.log(item.image);
   return (
     <View style={tw`bg-[#eee]  mx-2  p-2 rounded-xl w-[280px]  mt-4`}>
       <View style={tw`bg-white relative items-center   pb-2 rounded-lg`}>

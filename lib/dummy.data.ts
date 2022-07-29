@@ -14,8 +14,7 @@ export const dummy_HotDeals: Product[] = [
     name: "Air pods pro",
     price: 209,
     description: "This is product 1",
-    image:
-      "https://o.remove.bg/downloads/4e9ec3f2-f83f-4bc6-911e-67dd1358028b/image-removebg-preview.png",
+    image: "http://assets.stickpng.com/images/60b79e8771a1fd000411f6be.png",
     category: "Category 1",
     brand: "Apple",
   },
@@ -35,7 +34,7 @@ export const dummy_HotDeals: Product[] = [
     price: 1000,
     description: "This is product 1",
     image:
-      "https://o.remove.bg/downloads/7de4a307-646a-49dc-9120-6a971b29efad/image-removebg-preview.png",
+      "https://cdn.sanity.io/images/7azvzymu/production/935aef3ebbca1d58913421cbd2fa0cd4bc9cbf61-500x500.png",
     category: "Category 1",
     brand: "Apple",
   },
