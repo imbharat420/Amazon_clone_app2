@@ -5,6 +5,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screen/Home.screen";
 import LoginScreen from "./screen/Login.screen";
+import ProductScreen from "./screen/Product.screen";
+import 'react-native-gesture-handler'
 
 const stack = createNativeStackNavigator();
 export default function App() {
@@ -20,12 +22,23 @@ export default function App() {
             name="Login"
             component={LoginScreen}
           />
+          {/* Home screen */}
           <stack.Screen
             options={{
               headerShown: false,
             }}
             name="Home"
             component={HomeScreen}
+          />
+
+          {/* Product */}
+
+          <stack.Screen
+            options={{
+              headerShown: false,
+            }}
+            name="ProductDetail"
+            component={ProductScreen}
           />
         </stack.Navigator>
       </NavigationContainer>

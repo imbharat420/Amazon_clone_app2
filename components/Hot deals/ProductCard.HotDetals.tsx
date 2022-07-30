@@ -1,9 +1,10 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import tw from "twrnc";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Product } from "../../lib/dummy.data";
 import CurrencyFormat from "../Currency/CurrencyFormat";
+import { useNavigation } from "@react-navigation/native";
 enum style {
   wrapper = "mt-8 ",
   productName = "font-semibold text-[15px]",
@@ -15,8 +16,16 @@ interface CardProps {
 }
 
 const ProductCard = ({ item }: CardProps) => {
+  const navigation = useNavigation();
   return (
-    <View style={tw`bg-[#eee]  mx-2  p-2 rounded-xl w-[280px]  mt-4`}>
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate("ProductDetail", {
+          item: item,
+        });
+      }}
+      style={tw`bg-[#eee]  mx-2  p-2 rounded-xl w-[280px]  mt-4`}
+    >
       <View style={tw`bg-white relative items-center   pb-2 rounded-lg`}>
         <Image source={{ uri: item.image }} style={tw`h-[220px]  w-[180px]`} />
         {/* start Icons */}
@@ -40,7 +49,7 @@ const ProductCard = ({ item }: CardProps) => {
           <Text style={tw`${style.lightText}`}>4h 30m</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

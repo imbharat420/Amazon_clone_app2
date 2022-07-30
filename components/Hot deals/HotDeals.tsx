@@ -4,6 +4,7 @@ import tw from "twrnc";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { dummy_HotDeals, Product } from "../../lib/dummy.data";
 import ProductCard from "./ProductCard.HotDetals";
+  
 enum style {
   wrapper = "mt-2 px-4 ",
   title = "text-2xl font-medium",
@@ -11,6 +12,7 @@ enum style {
 }
 
 const HotDeals = () => {
+
   return (
     <View style={tw`${style.wrapper} `}>
       {/* title and show All */}
