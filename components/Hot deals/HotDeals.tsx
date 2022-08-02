@@ -2,9 +2,9 @@ import { View, Text, FlatList, ScrollView } from "react-native";
 import React from "react";
 import tw from "twrnc";
 import Icon from "react-native-vector-icons/FontAwesome";
-import { dummy_HotDeals, Product } from "../../lib/dummy.data";
+import { dummy_HotDeals, ProductProps } from "../../lib/dummy.data";
 import ProductCard from "./ProductCard.HotDetals";
-  
+import { fetchCurrentDeals } from "../../lib/Deals.sanity";
 enum style {
   wrapper = "mt-2 px-4 ",
   title = "text-2xl font-medium",
@@ -12,13 +12,23 @@ enum style {
 }
 
 const HotDeals = () => {
+  const [DealProducts, setDealProduct] = React.useState<any>([]);
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetchCurrentDeals();
+      setDealProduct(res);
+    };
+    fetchData();
+  }, []);
+
+  // console.log("deals", DealProducts[0]?.products);
 
   return (
     <View style={tw`${style.wrapper} `}>
       {/* title and show All */}
       <View style={tw`${style.headerContainer}`}>
         <Text style={tw`${style.title}`}>HotDeals</Text>
-      <View style={tw`flex-row items-center`}>
+        <View style={tw`flex-row items-center`}>
           <Text style={tw`text-[#ff5903] mr-2`}>Show All</Text>
           {/* right Arrow */}
           <Icon size={18} name="angle-right" color="#ff5903" />
@@ -26,9 +36,11 @@ const HotDeals = () => {
       </View>
       {/* Products */}
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {dummy_HotDeals?.map((product: Product, idx: number) => (
-          <ProductCard item={product} key={idx} />
-        ))}
+        {DealProducts[0]?.products?.map(
+          (product: ProductProps, idx: number) => (
+            <ProductCard item={product} key={idx} />
+          )
+        )}
       </ScrollView>
     </View>
   );

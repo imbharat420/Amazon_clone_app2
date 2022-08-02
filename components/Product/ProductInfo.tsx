@@ -27,7 +27,7 @@ const ProductInfo = ({ item }: any) => {
       <ReviewComponent item={item} />
       {/* feature */}
 
-      <AboutItem features={item.About} />
+      <AboutItem features={item.features} />
     </View>
   );
 };

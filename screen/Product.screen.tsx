@@ -26,7 +26,7 @@ const ProductScreen = () => {
   const { params }: any = useRoute();
   const { item }: Props = params;
   const navigation = useNavigation();
-
+  console.log("item", item);
   return (
     <SafeAreaView style={tw`relative bg-white flex-1`}>
       {/* Header */}

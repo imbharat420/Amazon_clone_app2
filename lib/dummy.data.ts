@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductProps {
   id: number;
   name: string;
   price: number;
@@ -12,7 +12,7 @@ export interface Product {
   About: string[];
 }
 
-export const dummy_HotDeals: Product[] = [
+export const dummy_HotDeals: ProductProps[] = [
   {
     id: 1,
     name: "Air pods pro",
