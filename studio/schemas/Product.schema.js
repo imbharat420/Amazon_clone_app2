@@ -78,5 +78,19 @@ export default {
       type: "array",
       of: [{ type: "string" }],
     },
+
+    {
+      name: "product_Images",
+      title: "Product_Images",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    },
   ],
 };
