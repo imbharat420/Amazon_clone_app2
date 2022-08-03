@@ -8,12 +8,14 @@ import {
 import React from "react";
 import Icon from "react-native-vector-icons/Feather";
 import tw from "twrnc";
+import { useNavigation } from "@react-navigation/native";
 
 const Header = () => {
+  const nav = useNavigation();
   return (
     <SafeAreaView style={tw`bg-[#1A232E] pb-8 rounded-b-sm  `}>
       <View style={tw`flex-row  items-center  px-3  justify-between pb-2`}>
-        <TouchableOpacity style={tw` `}>
+        <TouchableOpacity onPress={() => nav.navigate("Home")} style={tw` `}>
           <Icon name="align-center" size={25} color="#fff" />
         </TouchableOpacity>
         {/* center sider image */}

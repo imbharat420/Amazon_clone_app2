@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductProps {
   id: number;
   name: string;
   price: number;
@@ -12,7 +12,7 @@ export interface Product {
   About: string[];
 }
 
-export const dummy_HotDeals: Product[] = [
+export const dummy_HotDeals: ProductProps[] = [
   {
     id: 1,
     name: "Air pods pro",
@@ -113,14 +113,22 @@ export const dummy_category = [
   {
     name: "Computer & Laptop",
     Icon: "laptop",
+    slug: "Electronics",
   },
   {
     name: "Consoles & Games",
     Icon: "game-controller",
+    slug: "games",
   },
   {
     name: "Heath",
     Icon: "leaf",
+    slug: "health",
+  },
+  {
+    name: "Books",
+    Icon: "book",
+    slug: "books",
   },
 ];
 

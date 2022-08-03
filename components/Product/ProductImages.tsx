@@ -3,6 +3,7 @@ import React from "react";
 import tw from "twrnc";
 
 const ProductImages = ({ productImage }: any) => {
+  console.log("productImage", productImage);
   return (
     <ScrollView
       horizontal={true}
@@ -14,7 +15,7 @@ const ProductImages = ({ productImage }: any) => {
         <View key={index} style={tw`w-[350px]  items-center  rounded-md mr-4 `}>
           <Image
             source={{ uri: image }}
-            style={tw`w-[250px] h-[240px]  rounded-md`}
+            style={tw`w-[190px] h-[200px]  rounded-md`}
           />
         </View>
       ))}

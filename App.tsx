@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { TailwindProvider } from "tailwindcss-react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -6,7 +5,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screen/Home.screen";
 import LoginScreen from "./screen/Login.screen";
 import ProductScreen from "./screen/Product.screen";
-import 'react-native-gesture-handler'
+import "react-native-gesture-handler";
+import ProductListScreen from "./screen/ProductList.screen";
 
 const stack = createNativeStackNavigator();
 export default function App() {
@@ -39,6 +39,15 @@ export default function App() {
             }}
             name="ProductDetail"
             component={ProductScreen}
+          />
+
+          {/* Product list page */}
+          <stack.Screen
+            options={{
+              headerShown: false,
+            }}
+            name="ProductList"
+            component={ProductListScreen}
           />
         </stack.Navigator>
       </NavigationContainer>

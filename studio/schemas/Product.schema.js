@@ -30,19 +30,10 @@ export default {
       },
     },
     {
-      name: "categories",
-      title: "Categories",
-      type: "array",
-      of: [
-        {
-          type: "reference",
-          to: [
-            {
-              type: "category",
-            },
-          ],
-        },
-      ],
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: [{ type: "category" }],
     },
     {
       name: "brand",
@@ -78,10 +69,9 @@ export default {
       type: "array",
       of: [{ type: "string" }],
     },
-
     {
       name: "product_Images",
-      title: "Product_Images",
+      title: "Product Images",
       type: "array",
       of: [
         {

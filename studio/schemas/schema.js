@@ -7,8 +7,7 @@ import User from "./User.schema";
 import Product from "./Product.schema";
 import { CategorySchema } from "./category.schema";
 import { brandSchema } from "./brand.schema";
-import { Deals } from "./Deals.schema";
-
+import { DealsSchema } from "./Deals.schema";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -20,6 +19,6 @@ export default createSchema({
     Product,
     User,
     brandSchema,
-    Deals,
+    DealsSchema,
   ]),
 });

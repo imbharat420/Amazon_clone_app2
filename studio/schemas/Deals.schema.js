@@ -1,32 +1,26 @@
-export const Deals = {
+export const DealsSchema = {
   name: "deals",
   title: "Deals",
   type: "document",
+
   fields: [
     {
-      name: "item",
-      title: "Item",
+      name: "products",
+      title: "Products",
       type: "array",
       of: [
         {
           type: "reference",
-          to: [
-            {
-              type: "product",
-            },
-          ],
+          to: {
+            type: "product",
+          },
         },
       ],
     },
     {
-      name: "date",
-      title: "Date",
+      name: "Deal_day",
+      title: "Deal day",
       type: "datetime",
-    },
-    {
-      name: "deal_banner",
-      title: "Deal Banner",
-      type: "image",
     },
   ],
 };

@@ -11,7 +11,7 @@ import BalanceInfo from "../components/Balance/BalanceInfo";
 
 const HomeScreen = () => {
   return (
-    <LinearGradient colors={["#1A232E", "#white"]} style={tw` flex-1 `}>
+    <View style={tw` flex-1 bg-white `}>
       <View style={tw`bg-[#1A232E]  rounded-b-xl `}>
         <Header />
         {/* Search bar */}
@@ -22,7 +22,7 @@ const HomeScreen = () => {
 
       <View style={tw`w-full  border-b  mt-2 border-[#f5f5f5]`} />
 
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView   showsVerticalScrollIndicator={false}>
         {/* Banner */}
         <Banner />
         {/* not details */}
@@ -31,7 +31,7 @@ const HomeScreen = () => {
         {/* Popular  */}
         <PopularCategory />
       </ScrollView>
-    </LinearGradient>
+    </View>
   );
 };
 
