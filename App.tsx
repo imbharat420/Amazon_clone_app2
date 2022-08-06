@@ -7,51 +7,54 @@ import LoginScreen from "./screen/Login.screen";
 import ProductScreen from "./screen/Product.screen";
 import "react-native-gesture-handler";
 import ProductListScreen from "./screen/ProductList.screen";
+import { AmazonProvider } from "./context/AmazonContext";
 
 const stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <TailwindProvider>
-      <NavigationContainer>
-        <stack.Navigator>
-          {/* Home Screen */}
-          <stack.Screen
-            options={{
-              headerShown: false,
-            }}
-            name="Login"
-            component={LoginScreen}
-          />
-          {/* Home screen */}
-          <stack.Screen
-            options={{
-              headerShown: false,
-            }}
-            name="Home"
-            component={HomeScreen}
-          />
+    <AmazonProvider>
+      <TailwindProvider>
+        <NavigationContainer>
+          <stack.Navigator>
+            {/* Home Screen */}
+            <stack.Screen
+              options={{
+                headerShown: false,
+              }}
+              name="Login"
+              component={LoginScreen}
+            />
+            {/* Home screen */}
+            <stack.Screen
+              options={{
+                headerShown: false,
+              }}
+              name="Home"
+              component={HomeScreen}
+            />
 
-          {/* Product */}
+            {/* Product */}
 
-          <stack.Screen
-            options={{
-              headerShown: false,
-            }}
-            name="ProductDetail"
-            component={ProductScreen}
-          />
+            <stack.Screen
+              options={{
+                headerShown: false,
+              }}
+              name="ProductDetail"
+              component={ProductScreen}
+            />
 
-          {/* Product list page */}
-          <stack.Screen
-            options={{
-              headerShown: false,
-            }}
-            name="ProductList"
-            component={ProductListScreen}
-          />
-        </stack.Navigator>
-      </NavigationContainer>
-    </TailwindProvider>
+            {/* Product list page */}
+            <stack.Screen
+              options={{
+                headerShown: false,
+              }}
+              name="ProductList"
+              component={ProductListScreen}
+            />
+          </stack.Navigator>
+        </NavigationContainer>
+      </TailwindProvider>
+    </AmazonProvider>
   );
 }
 

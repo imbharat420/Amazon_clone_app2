@@ -5,6 +5,6 @@ export const client = sanityClient({
   dataset: "production",
   apiVersion: "v1",
   useCdn: false,
-
+  token: process.env.APP_SANITY_CLIENT,
   // token: "your token here",
 });

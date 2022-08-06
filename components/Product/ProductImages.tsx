@@ -3,7 +3,6 @@ import React from "react";
 import tw from "twrnc";
 
 const ProductImages = ({ productImage }: any) => {
-  console.log("productImage", productImage);
   return (
     <ScrollView
       horizontal={true}

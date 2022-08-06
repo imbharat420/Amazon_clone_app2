@@ -1,8 +1,8 @@
 import { UserIcon } from "@sanity/icons";
 
 export default {
-  name: "users",
-  title: "Users",
+  name: "user",
+  title: "User",
   type: "document",
   icon: UserIcon,
   fields: [
@@ -20,6 +20,7 @@ export default {
         source: "name",
         maxLength: 100,
       },
+      
     },
     {
       name: "image",
@@ -28,6 +29,13 @@ export default {
       options: {
         hotspot: true,
       },
+    },
+    {
+      name: "email",
+      title: "Email",
+      type: "string",
+      description: "Please use a valid email address",
+      validation: (Rule) => Rule.required().email(),
     },
   ],
 };

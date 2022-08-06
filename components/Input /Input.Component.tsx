@@ -5,11 +5,11 @@ import tw from "twrnc";
 interface InputProps {
   placeholder: string;
   title: string;
-  //   onChangeText: (text: string) => void;
   isSecure?: boolean;
+  InputState?: (text: string) => void;
 }
 
-const Input = ({ placeholder, title, isSecure }: InputProps) => {
+const Input = ({ placeholder, title, isSecure, InputState }: InputProps) => {
   return (
     <View style={tw`mt-4`}>
       <Text style={tw`text-gray-200 px-2 text-[16px]`}>{title}</Text>
@@ -19,6 +19,7 @@ const Input = ({ placeholder, title, isSecure }: InputProps) => {
           placeholder={placeholder}
           placeholderTextColor="#fff"
           secureTextEntry={isSecure}
+          onChangeText={(text) => InputState && InputState(text)}
         />
       </View>
     </View>
